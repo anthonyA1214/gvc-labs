@@ -1,35 +1,35 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  noStroke();
+  createCanvas(900, 600);
 }
 
 function draw() {
-  background("#0b1220");
+  background(255);
+  strokeWeight(3)
 
-  const x = width * 0.5;
-  const y = height * 0.45;
-  const size = min(width, height) * 0.35;
+  // mountain1
+  triangle(
+    -25, 600,   
+    225, 250,   
+    425, 600
+  );
 
-  fill("#FFF7D6");
-  ellipse(x, y, size, size);
+  // mountain2
+  triangle(
+    425, 600,   
+    675, 280,   
+    925, 600    
+  );
 
-  fill("#0b1220");
-  ellipse(x + size * 0.3, y - size * 0.05, size * 0.9, size * 0.9);
+  // cloud1
+  circle(150, 150, 50);
+  circle(180, 135, 65);
+  circle(220, 150, 50);
 
-  star(100);
-}
+  // cloud2
+  circle(650, 160, 50);
+  circle(680, 150, 70);
+  circle(720, 160, 50);
 
-function star(count) {
-  randomSeed(1);
-  fill(255, 255, 255);
-  for (let i = 0; i < count; i++) {
-    const x = random(width);
-    const y = random(height);
-    const size = random(1, 3);
-    ellipse(x, y, size, size);
-  }
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  // sun
+  circle(450, 300, 120);
 }
