@@ -1,20 +1,26 @@
+// let brushColor = 0;
+// let brushSize = 10;
+
+// function setup() {
+//   createCanvas(900, 600);
+//   background(255);
+// }
+
+// function draw() {
+//   if (mouseIsPressed) {
+//     stroke(0);
+//     strokeWeight(brushSize);
+//     line(mouseX, mouseY, pmouseX, pmouseY);
+//   }
+// }
+
+// function keyPressed() {
+//   if (key === 'C') {
+//     background(255);
+//   }
+// }
+
 function setup() {
   createCanvas(900, 600);
-}
-
-let size = 40;
-
-function draw() {
   background(255);
-  
-  ellipse(mouseX, mouseY, size);
-}
-
-function keyIsDown() {
-  if (key === "W" || key === "w") size++;
-  if (key === "S" || key === "s") size--;
-}
-
-function mousePressed() {
-  console.log(size)
 }
